@@ -7,7 +7,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return 'Car Detected at 5 metre'
 
 @app.route('/predict',methods=['POST'])
 def predict():
