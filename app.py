@@ -1,13 +1,16 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
+from flask import request
+import flask
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return 'Car Detected at 5 metre'
+    url = request.args.get('url') 
+    return {'object': "object found at 5 meters", "url" : "CAr"}
 
 @app.route('/predict',methods=['POST'])
 def predict():
