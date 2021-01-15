@@ -10,7 +10,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 @app.route('/')
 def home():
     url = request.args.get('url') 
-    return {'object': "object found at 5 meters", "url" : "CAr"}
+    return {'object': "Car detected please stay alert", "url" : "CAr"}
 
 @app.route('/predict',methods=['POST'])
 def predict():
