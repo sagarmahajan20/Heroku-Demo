@@ -25,7 +25,7 @@ def predict():
 
     return 'Car Detected at 5 metre'
 
-@app.route('/url/', methods=['GET']) #<string:url>
+@app.route('/imageurl/', methods=['GET']) #<string:url>
 def get_task():
 	url = request.args.get('url') 
     person_classifier = cv2.CascadeClassifier('haarcascade_fullbody.xml')
